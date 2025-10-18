@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/* ================================
+   VARIABLES
+================================ */
+/* ================================
+   RESETEO GENERAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   INDEX
+================================ */
+/* NAVBAR */
+.navbar {
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+  background-color: #f7405b !important;
+  border: 3px solid #bc3232 !important;
+  border-radius: 1rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: large;
+}
+.navbar a:hover {
+  color: #f8d6c9 !important;
+}
+.navbar .navbar-brand:hover {
+  color: black !important;
+}
+.navbar a {
+  padding: 15px;
+}
+
+.titulo {
+  font-size: xx-large;
+  color: #fcc3ac;
+  font-family: monospace;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f8d6c9;
+  padding: 10px;
+}
+
+/* ================================
+   ARTÍCULOS
+================================ */
+.articulos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.art {
+  margin: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #fcc3ac;
+  border-radius: 1rem;
+}
+
+/* ================================
+   POPULARES INDEX
+================================ */
+.indexpopulares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+  padding: 15px;
+  font-family: monospace;
+}
+.indexpopulares .imagenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.indexpopulares img {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+.indexpopulares a {
+  color: #fcc3ac;
+  font-family: monospace;
+  font-size: x-large;
+  text-decoration: none;
+}
+.indexpopulares a:hover {
+  color: #c42424;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin: 15px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  display: grid;
+  justify-content: center;
+  padding: 15px;
+  background-color: #ec846a;
+  text-align: center;
+  font-family: monospace;
+}
+footer a {
+  color: #ee2c2c;
+  padding: 5px;
+}
+footer a:hover {
+  color: #c42424 !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ================================
+   ACERCA DE
+================================ */
+.about {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
+.about h2 {
+  color: #fcc3ac;
+}
+
+/* ================================
+   CONTACTO
+================================ */
+.contact {
+  margin: 30px;
+  width: 750px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+  padding: 15px;
+}
+.contact h2 {
+  color: #fcc3ac;
+}
+
+input:focus,
+textarea:valid,
+button:hover {
+  background-color: #cda199;
+}
+
+button {
+  padding: 5px;
+  border-radius: 7px;
+  background-color: #fcc3ac;
+  color: #f7405b;
+  margin: 3px;
+  border-color: #c42424;
+}
+
+/* ================================
+   CONTENEDORES GENERALES
+================================ */
+.articulos,
+.indexpopulares,
+.contact,
+.about,
+.main_populares {
+  border: 3px solid #bc3232;
+  border-radius: 1rem;
+  background-color: #f7405b;
+}
+
+/* ================================
+   POPULARES PÁGINA
+================================ */
+.main_populares {
+  width: 1200px;
+  margin: 25px auto;
+  padding: 25px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: #f7405b;
+  border-radius: 1rem;
+}
+.main_populares_img {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+#carousel .carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================================
+   TIENDA
+================================ */
+.new,
+.textiles {
+  display: grid;
+  justify-items: center;
+  border: 3px solid #bc3232;
+  border-radius: 1rem;
+  background-color: #f7405b;
+  height: 470px;
+  width: 450px;
+  margin: 20px;
+  padding: 10px;
+  font-size: larger;
+}
+.new h3,
+.textiles h3 {
+  color: #f8d6c9;
+}
+.new img,
+.textiles img {
+  padding: 10px;
+  height: 400px;
+}
+
+.art-tienda {
+  display: flex;
+  justify-content: center;
+}
+
+/* ================================
+   MEDIA QUERIES
+================================ */
+/* CELULARES */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: medium;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  .navbar a {
+    padding: 8px;
+    display: block;
+  }
+  .titulo {
+    font-size: large;
+    margin-bottom: 10px;
+  }
+  .grilla,
+  .articulos,
+  .about,
+  .art-tienda,
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .art {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  .indexpopulares {
+    margin: 10px;
+    padding: 10px;
+  }
+  .indexpopulares .imagenes {
+    grid-template-columns: 1fr;
+  }
+  .indexpopulares img {
+    width: 100%;
+    height: auto;
+  }
+  .indexpopulares a {
+    font-size: large;
+  }
+  .contact {
+    width: 100%;
+    height: auto;
+  }
+  .contact input,
+  .contact textarea {
+    width: 90%;
+  }
+  .main_populares {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .main_populares_img {
+    height: 300px;
+  }
+  .new,
+  .textiles {
+    width: 90%;
+    height: auto;
+    font-size: medium;
+    margin: 10px 0;
+  }
+  .new img,
+  .textiles img {
+    height: auto;
+    max-height: 300px;
+  }
+  footer {
+    flex-direction: column;
+    font-size: small;
+    padding: 10px;
+    text-align: center;
+  }
+  footer a {
+    margin: 5px 0;
+  }
+}
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .navbar {
+    font-size: large;
+    padding: 10px;
+    width: 100%;
+  }
+  .titulo {
+    font-size: x-large;
+  }
+  .grilla {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 20px;
+  }
+  .articulos,
+  .about,
+  .art-tienda,
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 15px;
+    padding: 15px;
+  }
+  .art {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .indexpopulares .imagenes {
+    grid-template-columns: 1fr 1fr;
+  }
+  .indexpopulares img {
+    width: 100%;
+    height: auto;
+  }
+  .indexpopulares a {
+    font-size: large;
+  }
+  .main_populares {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .main_populares_img {
+    height: 500px;
+  }
+  .new,
+  .textiles {
+    width: 90%;
+    height: auto;
+  }
+  .new img,
+  .textiles img {
+    height: auto;
+    max-height: 400px;
+  }
+  footer {
+    flex-direction: column;
+    font-size: medium;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
