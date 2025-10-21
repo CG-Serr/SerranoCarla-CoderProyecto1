@@ -1,6 +1,4 @@
-/* ================================
-   VARIABLES
-================================ */
+/*VARIABLES*/
 $color-principal: #f7405b;
 $color-secundario: #bc3232;
 $color-acentos: #c42424;
@@ -13,18 +11,93 @@ $color-footer-text: #ee2c2c;
 $border: 3px solid $color-secundario;
 $radius: 1rem;
 
-/* ================================
-   RESETEO GENERAL
-================================ */
+/*ANIMACIONES*/
+
+@keyframes animation_jelly {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+@keyframes animation_contact {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+   transform: translateY(0);      
+   animation-timing-function: ease-out;      
+   opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes animation_about {
+  0% {
+   transform: rotateX(-100deg);
+   transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================================
-   INDEX
-================================ */
+/*INDEX*/
 
 /* NAVBAR */
 .navbar {
@@ -40,9 +113,10 @@ $radius: 1rem;
   font-size: large;
   a:hover{
     color: $color-crema !important;
+    
   }
   .navbar-brand:hover{
-    color: black !important;
+   color: black !important;
   }
   a {
     padding: 15px;
@@ -61,9 +135,7 @@ body {
   padding: 10px;
 }
 
-/* ================================
-   ARTÍCULOS
-================================ */
+/*ARTÍCULOS*/
 .articulos {
   display: flex;
   flex-direction: column;
@@ -80,9 +152,11 @@ body {
   border-radius: $radius;
 }
 
-/* ================================
-   POPULARES INDEX
-================================ */
+
+
+
+
+/*POPULARES INDEX*/
 .indexpopulares {
   display: flex;
   flex-direction: column;
@@ -91,6 +165,7 @@ body {
   margin: 20px;
   padding: 15px;
   font-family: monospace;
+  animation: animation_jelly 1s ease-in-out both;
 
   .imagenes {
     display: grid;
@@ -103,6 +178,7 @@ body {
     width: 100%;
     height: auto;
   }
+}
 
   a {
     color: $color-rosa-claro;
@@ -112,9 +188,8 @@ body {
 
     &:hover {
       color: $color-acentos;
-    }
   }
-}
+  }
 
 .grilla {
   display: grid;
@@ -124,24 +199,24 @@ body {
   margin: 15px;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/*FOOTER*/
 footer {
   display: grid;
   justify-content: center;
   padding: 15px;
   background-color: $color-footer;
   text-align: center;
-  font-family:monospace ;
+  font-family:monospace;
 
-  a {
-    color: $color-footer-text;
-    padding: 5px; 
+  .links {
+    padding: 5px;
+    
   }
 
-  a:hover{
-    color: $color-acentos !important;
+  .links:hover{
+    color: $color-acentos;
+    cursor: pointer;
+    
 }
 }
 
@@ -157,24 +232,24 @@ main {
   flex: 1;
 }
 
-/* ================================
-   ACERCA DE
-================================ */
+/*ACERCA DE*/
 .about {
   margin: 30px;
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 15px;
+  animation: animation_about 1.5s ease;
 
   h2 {
     color: $color-rosa-claro;
+    &:hover{
+      animation: animation_jelly 1s ease;
+    }
   }
 }
 
-/* ================================
-   CONTACTO
-================================ */
+/*CONTACTO*/
 .contact {
   margin: 30px;
   width: 750px;
@@ -184,9 +259,13 @@ main {
   align-self: center;
   gap: 20px;
   padding: 15px;
+  animation: animation_contact 1s ease;
 
   h2 {
     color: $color-rosa-claro;
+    &:hover{
+      animation: animation_jelly 1s ease;
+    }
   }
 }
 
@@ -205,9 +284,7 @@ button {
   border-color: #c42424;
 }
 
-/* ================================
-   CONTENEDORES GENERALES
-================================ */
+/*CONTENEDORES GENERALES*/
 .articulos,
 .indexpopulares,
 .contact,
@@ -218,11 +295,8 @@ button {
   background-color: $color-principal;
 }
 
-/* ================================
-   POPULARES PÁGINA
-================================ */
+/*POPULARES PÁGINA*/
 .main_populares {
-  width: 1200px;
   margin: 25px auto;
   padding: 25px;
   display: grid;
@@ -248,9 +322,7 @@ button {
   }
 }
 
-/* ================================
-   TIENDA
-================================ */
+/*TIENDA*/
 .new,
 .textiles {
   display: grid;
@@ -279,9 +351,7 @@ button {
   justify-content: center;
 }
 
-/* ================================
-   MEDIA QUERIES
-================================ */
+/*MEDIA QUERIES*/
 
 /* CELULARES */
 @media (max-width: 600px) {
@@ -307,6 +377,8 @@ button {
   .titulo {
     font-size: large;
     margin-bottom: 10px;
+    
+
   }
 
   .grilla,
