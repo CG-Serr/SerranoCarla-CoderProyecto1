@@ -207,6 +207,9 @@ footer {
   background-color: $color-footer;
   text-align: center;
   font-family:monospace;
+  border: 3px solid $color-crema;
+  border-radius: $radius;
+  
 
   .links {
     padding: 5px;
@@ -309,6 +312,14 @@ button {
     width: 100%;
     height: 800px;
     overflow: hidden;
+  }
+
+  h2{
+    color: $color-rosa-claro;
+  }
+
+  p{
+    font-family: monospace;
   }
 }
 
